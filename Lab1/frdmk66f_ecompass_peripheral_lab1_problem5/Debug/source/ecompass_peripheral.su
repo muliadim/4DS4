@@ -1,0 +1,14 @@
+D:\4DS4\MCUXpressoIDE_11.5.0_7232\workspace\frdmk66f_ecompass_peripheral_lab1_problem5\CMSIS/core_cm4.h:1809:22:__NVIC_SetPriority	16	static
+D:\4DS4\MCUXpressoIDE_11.5.0_7232\workspace\frdmk66f_ecompass_peripheral_lab1_problem5\CMSIS/core_cm4.h:2017:26:SysTick_Config	16	static
+D:\4DS4\MCUXpressoIDE_11.5.0_7232\workspace\frdmk66f_ecompass_peripheral_lab1_problem5\drivers/fsl_gpio.h:162:20:GPIO_PinWrite	24	static
+../source/ecompass_peripheral.c:110:13:HW_Timer_init	8	static
+../source/ecompass_peripheral.c:116:6:SysTick_Handler	4	static
+../source/ecompass_peripheral.c:121:13:Delay	16	static
+../source/ecompass_peripheral.c:129:13:Sensor_ReadData	40	static
+../source/ecompass_peripheral.c:149:13:Magnetometer_Calibrate	32	static
+../source/ecompass_peripheral.c:198:6:setupSPI	48	static
+../source/ecompass_peripheral.c:221:6:voltageRegulatorEnable	16	static
+../source/ecompass_peripheral.c:230:6:accelerometerEnable	16	static
+../source/ecompass_peripheral.c:239:10:SPI_read	48	static
+../source/ecompass_peripheral.c:260:10:SPI_write	40	static
+../source/ecompass_peripheral.c:359:5:main	104	static

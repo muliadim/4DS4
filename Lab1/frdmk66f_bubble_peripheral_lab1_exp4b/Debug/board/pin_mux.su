@@ -1,0 +1,8 @@
+D:\4DS4\MCUXpressoIDE_11.5.0_7232\workspace\frdmk66f_bubble_peripheral_lab1_exp4b\drivers/fsl_clock.h:725:20:CLOCK_EnableClock	24	static
+D:\4DS4\MCUXpressoIDE_11.5.0_7232\workspace\frdmk66f_bubble_peripheral_lab1_exp4b\drivers/fsl_port.h:271:20:PORT_SetPinConfig	32	static
+D:\4DS4\MCUXpressoIDE_11.5.0_7232\workspace\frdmk66f_bubble_peripheral_lab1_exp4b\drivers/fsl_port.h:374:20:PORT_SetPinMux	24	static
+D:\4DS4\MCUXpressoIDE_11.5.0_7232\workspace\frdmk66f_bubble_peripheral_lab1_exp4b\drivers/fsl_port.h:389:20:PORT_EnablePinsDigitalFilter	24	static
+../board/pin_mux.c:43:6:BOARD_InitBootPins	8	static
+../board/pin_mux.c:68:6:BOARD_InitPins	8	static
+../board/pin_mux.c:105:6:BOARD_I2C_ConfigurePins	16	static
+../board/pin_mux.c:173:6:BOARD_Init_I2C_GPIO_pins	16	static
