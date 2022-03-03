@@ -10,3 +10,70 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\4DS4\MCUXpres
 
 !ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2022-02-10 01:10:53.472
 !MESSAGE The device 'MK66FN2M0xxx18' (version='1.0.0') from SDK 'SDK_2.x_FRDM-K66F' (version='2.11.0', build='epluginsite519 2022-01-17') will be installed.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2022-02-10 01:13:11.303
+!MESSAGE Connection to https://mcuxpresso.nxp.com/eclipse/sdk/2.7.0/features/com.nxp.mcuxpresso.sdk.sdk_2.x_frdm-kl43z.feature_2.7.0.201911251446.jar failed on Socket closed. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLException: Socket closed
+	at java.base/sun.security.ssl.Alert.createSSLException(Unknown Source)
+	at java.base/sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at java.base/sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at java.base/sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.handleException(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(Unknown Source)
+	at org.apache.http.impl.conn.LoggingInputStream.read(LoggingInputStream.java:84)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:137)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:153)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:157)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1003)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:995)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:991)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+	at java.base/java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.base/java.net.SocketInputStream.read(Unknown Source)
+	at java.base/java.net.SocketInputStream.read(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(Unknown Source)
+	... 23 more
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 4 13 2022-02-10 01:13:11.507
+!MESSAGE Download of org.eclipse.update.feature,com.nxp.mcuxpresso.sdk.sdk_2.x_frdm-kl43z.feature,2.7.0.201911251446 failed on repository https://mcuxpresso.nxp.com/eclipse/sdk/2.7.0. Retrying. 
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-02-10 01:13:11.507
+!MESSAGE Error while reading from repository: https://mcuxpresso.nxp.com/eclipse/sdk/2.7.0/features/com.nxp.mcuxpresso.sdk.sdk_2.x_frdm-kl43z.feature_2.7.0.201911251446.jar.
+
+!ENTRY com.crt.log 4 -1 2022-02-10 01:13:11.508
+!MESSAGE Exception
+!STACK 0
+java.lang.Exception: java.lang.NullPointerException
+	at com.crt.utils.general.Reporter.log(Reporter.java:591)
+	at com.nxp.mcuxpresso.core.datamodels.ui.jobs.RefreshSDKRepoJob.run(RefreshSDKRepoJob.java:265)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.internalGet(ScopedPreferenceStore.java:389)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getString(ScopedPreferenceStore.java:433)
+	at com.crt.utils.general.Reporter.log(Reporter.java:596)
+	at com.crt.utils.general.Reporter.logDebug(Reporter.java:607)
+	at com.crt.utils.general.Reporter.logDebug(Reporter.java:611)
+	at com.nxp.mcuxpresso.core.datamodels.ui.jobs.RefreshSDKRepoJob.processArtifactFromBundle(RefreshSDKRepoJob.java:525)
+	at com.nxp.mcuxpresso.core.datamodels.ui.jobs.RefreshSDKRepoJob.processPluginsForFeature(RefreshSDKRepoJob.java:446)
+	at com.nxp.mcuxpresso.core.datamodels.ui.jobs.RefreshSDKRepoJob.processRemoteFeatures(RefreshSDKRepoJob.java:321)
+	at com.nxp.mcuxpresso.core.datamodels.ui.jobs.RefreshSDKRepoJob.run(RefreshSDKRepoJob.java:241)
+	... 1 more
